@@ -1,20 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      IonSlider: no Controller support
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="myHeader">
+      <ion-slides #headerSlider [options]="headerOpts">
+        <ion-slide>
+          <h5>Header 1</h5>
+        </ion-slide>
+        <ion-slide>
+          <h5>Header 2</h5>
+        </ion-slide>
+        <ion-slide>
+          <h5>Header 3</h5>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="myContent">
+      <ion-slides #contentSlider [options]="contentOpts">
+        <ion-slide>
+          <p>Hi, I'm content slide 1</p>
+        </ion-slide>
+        <ion-slide>
+          <p>Hi, I'm content slide 2</p>
+        </ion-slide>
+        <ion-slide>
+          <p>Hi, I'm content slide 3</p>
+        </ion-slide>
+      </ion-slides>
+    </div>
   </div>
 </ion-content>
